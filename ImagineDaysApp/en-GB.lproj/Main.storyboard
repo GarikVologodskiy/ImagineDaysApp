@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ImagineDaysApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enjoy every day!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RgA-FJ-CuO">
+                                <rect key="frame" x="105.66666666666669" y="127" width="217" height="42"/>
+                                <fontDescription key="fontDescription" name="KohinoorBangla-Regular" family="Kohinoor Bangla" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select your birthday:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RCQ-v2-7km">
+                                <rect key="frame" x="131" y="199" width="166" height="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="Xlm-wZ-Hj5">
+                                <rect key="frame" x="54" y="251" width="320" height="216"/>
+                                <locale key="locale" localeIdentifier="en"/>
+                                <connections>
+                                    <action selector="datePicker:" destination="BYZ-38-t0r" eventType="valueChanged" id="pRq-QN-SFd"/>
+                                </connections>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kyX-eO-hK4">
+                                <rect key="frame" x="158" y="487" width="112" height="55"/>
+                                <color key="backgroundColor" systemColor="systemCyanColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="55" id="CUq-np-5tc"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="112" id="DXk-tu-JyX"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Result">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="resultButtonTapped" destination="BYZ-38-t0r" eventType="touchUpInside" id="O2D-y1-CMC"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You've been enjoying life for ... days" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pT-0y-GCN">
+                                <rect key="frame" x="53" y="562" width="321.33333333333331" height="21.666666666666629"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray5Color"/>
+                        <constraints>
+                            <constraint firstItem="RCQ-v2-7km" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0an-L6-scJ"/>
+                            <constraint firstItem="RgA-FJ-CuO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1iW-rl-SLA"/>
+                            <constraint firstItem="Xlm-wZ-Hj5" firstAttribute="top" secondItem="RCQ-v2-7km" secondAttribute="bottom" constant="30" id="1uB-ug-F15"/>
+                            <constraint firstItem="4pT-0y-GCN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="53" id="9p4-YV-Dlf"/>
+                            <constraint firstItem="kyX-eO-hK4" firstAttribute="top" secondItem="Xlm-wZ-Hj5" secondAttribute="bottom" constant="20" id="IkA-DG-5X3"/>
+                            <constraint firstItem="RCQ-v2-7km" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="OOu-4R-Qmr"/>
+                            <constraint firstItem="4pT-0y-GCN" firstAttribute="top" secondItem="kyX-eO-hK4" secondAttribute="bottom" constant="20" id="TUD-h6-dq5"/>
+                            <constraint firstItem="kyX-eO-hK4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bJh-c7-yim"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4pT-0y-GCN" secondAttribute="trailing" constant="53.670000000000002" id="bzG-1S-Mrl"/>
+                            <constraint firstItem="Xlm-wZ-Hj5" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="cVU-PB-JaA"/>
+                            <constraint firstItem="RCQ-v2-7km" firstAttribute="top" secondItem="RgA-FJ-CuO" secondAttribute="bottom" constant="30" id="hgT-44-Ybz"/>
+                            <constraint firstItem="RgA-FJ-CuO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="uFA-aO-ZQI"/>
+                            <constraint firstItem="RgA-FJ-CuO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="yz6-jp-m3b"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="infoLabel" destination="4pT-0y-GCN" id="obz-qg-Stc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="61.832061068702288" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemCyanColor">
+            <color red="0.19607843137254902" green="0.67843137254901964" blue="0.90196078431372551" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.89803921568627454" green="0.89803921568627454" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
