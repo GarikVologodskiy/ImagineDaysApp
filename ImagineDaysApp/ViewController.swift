@@ -28,15 +28,6 @@ class ViewController: UIViewController {
         let range = sender.date..<Date.now
         numberOfDays = range.formatted(.components(style: .wide, fields: [.day]))
         
-//        if sender.date<Date.now {
-//            let range = sender.date..<Date.now
-//            let numberOfDays = range.formatted(.components(style: .wide, fields: [.day]))
-//        } else {
-//            let DatePicker = UIDatePicker()
-//            DatePicker.maximumDate = Date.now
-//            //infoLabel.text = "You are in the future!"
-//        }
-        
     }
 
     @IBAction func resultButtonTapped() {
